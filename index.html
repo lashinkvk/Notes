@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121214'/%3E%3Cpath d='M20 22h24M20 32h24M20 42h14' fill='none' stroke='%23cdb27a' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="side" id="side" aria-label="Notes list">
+            <div class="side-top">
+                <h1 class="brand">Notes</h1><button class="icon" id="themeBtn"
+                    aria-label="Toggle light and dark theme">◐</button>
+            </div>
+            <input type="search" id="q" placeholder="Search notes" aria-label="Search notes">
+            <button class="btn gold" id="newBtn">＋ New note</button>
+            <div class="list" id="list"></div>
+        </aside>
+        <div class="backdrop" id="bd"></div>
+        <main class="pane">
+            <div class="bar">
+                <button class="icon only-m" id="menuBtn" aria-label="Open notes list" aria-expanded="false">☰</button>
+                <span class="muted grow" id="state"></span>
+                <button class="btn" id="pinBtn" hidden>Pin</button>
+                <button class="btn danger" id="delBtn" hidden>Delete</button>
+            </div>
+            <section id="editor"></section>
+        </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <noscript>Notes needs JavaScript enabled to store and show your notes.</noscript>
+    <script src="app.js"></script>
+</body>
+
+</html>
